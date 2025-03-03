@@ -7,6 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.refinedrain.refinedmod.RefinedMod;
 import net.refinedrain.refinedmod.spells.FrostStrikeSpell;
+import net.refinedrain.refinedmod.spells.ThunderStrikeSpell;
 
 
 public class RefinedSpellRegistry {
@@ -21,6 +22,7 @@ public class RefinedSpellRegistry {
     }
 
     public static final RegistryObject<AbstractSpell> FROST_STRIKE_SPELL = registerSpell(new FrostStrikeSpell());
+    public static final RegistryObject<AbstractSpell> THUNDER_STRIKE_SPELL = registerSpell(new ThunderStrikeSpell());
 
 }
 

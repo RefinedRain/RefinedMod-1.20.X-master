@@ -75,7 +75,7 @@ public class FrostStrikeSpell extends AbstractSpell {
 
     @Override
     public Optional<SoundEvent> getCastFinishSound() {
-        return Optional.of(SoundRegistry.DIVINE_SMITE_CAST.get());
+        return Optional.of(SoundRegistry.FLAMING_STRIKE_SWING.get());
     }
 
     @Override

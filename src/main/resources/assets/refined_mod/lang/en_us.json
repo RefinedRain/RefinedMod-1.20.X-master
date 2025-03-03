@@ -1,6 +1,8 @@
 {
   "spell.refined_mod.frost_strike": "Frost Strike",
   "spell.refined_mod.frost_strike_guide": "Strike with an Icy Blade.",
+  "spell.refined_mod.thunder_strike": "Thunder Strike",
+  "spell.refined_mod.thunder_strike_guide": "Call down a bolt of Lightning with your armament.",
 
   "ui.irons_spellbooks.damage": "%d Damage"
 }
