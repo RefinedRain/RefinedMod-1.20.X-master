@@ -7,7 +7,6 @@ import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.entity.spells.AbstractShieldEntity;
 import io.redspace.ironsspellbooks.entity.spells.ShieldPart;
 import io.redspace.ironsspellbooks.entity.mobs.AntiMagicSusceptible;
-import io.redspace.ironsspellbooks.util.ParticleHelper;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -24,6 +23,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.entity.Entity;
 import net.refinedrain.refinedmod.registry.EntityRegistry;
 import net.refinedrain.refinedmod.registry.RefinedSpellRegistry;
+import net.refinedrain.refinedmod.util.ParticleHelper;
 
 
 import java.util.ArrayList;
@@ -116,7 +116,7 @@ public class  MoonSlashProjectile extends Projectile implements AntiMagicSuscept
             }
             for (Entity entity : level().getEntities(this, this.getBoundingBox()).stream().filter(target -> canHitEntity(target) && !victims.contains(target)).collect(Collectors.toSet())) {
                 damageEntity(entity);
-                MagicManager.spawnParticles(level(), ParticleHelper.SNOW_DUST, entity.getX(), entity.getY(), entity.getZ(), 20, 0, 0, 0, .5, true);
+                MagicManager.spawnParticles(level(), ParticleHelper.GLINT_STAR, entity.getX(), entity.getY(), entity.getZ(), 20, 0, 0, 0, .5, true);
                 if (entity instanceof ShieldPart || entity instanceof AbstractShieldEntity) {
                     discard();
                     return;
@@ -173,9 +173,9 @@ public class  MoonSlashProjectile extends Projectile implements AntiMagicSuscept
                 double rotZ = -offset * Math.sin(radians);
 
                 double dx = Math.random() * speed * 2 - speed;
-                double dy = Math.random() * speed * 1 - speed;
+                double dy = Math.random() * speed * 2 - speed;
                 double dz = Math.random() * speed * 2 - speed;
-                level().addParticle(ParticleHelper.SNOW_DUST, false, x + rotX + dx, y + dy, z + rotZ + dz, dx, dy, dz);
+                level().addParticle(ParticleHelper.GLINT_STAR, false, x + rotX + dx, y + dy, z + rotZ + dz, dx, dy, dz);
             }
         }
     }
@@ -201,6 +201,7 @@ public class  MoonSlashProjectile extends Projectile implements AntiMagicSuscept
         super.readAdditionalSaveData(pCompound);
         this.damage = pCompound.getFloat("Damage");
     }
+
 
     public float getAlpha() {
         return this.alpha;

@@ -52,7 +52,7 @@ public class ThunderStrikeSpell extends AbstractSpell {
 
     public ThunderStrikeSpell() {
         this.manaCostPerLevel = 15;
-        this.baseSpellPower = 8;
+        this.baseSpellPower = 6;
         this.spellPowerPerLevel = 3;
         this.castTime = 16;
         this.baseManaCost = 35;

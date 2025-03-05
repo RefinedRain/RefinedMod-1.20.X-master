@@ -1,7 +1,7 @@
 package net.refinedrain.refinedmod;
 
 import com.mojang.logging.LogUtils;
-import io.redspace.ironsspellbooks.registries.ParticleRegistry;
+
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -14,6 +14,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.refinedrain.refinedmod.registry.EntityRegistry;
+import net.refinedrain.refinedmod.registry.ParticleRegistry;
 import net.refinedrain.refinedmod.registry.RefinedSpellRegistry;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
