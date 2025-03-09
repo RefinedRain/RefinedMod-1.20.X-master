@@ -11,7 +11,7 @@ public class GlintStarParticle extends TextureSheetParticle {
 
     public GlintStarParticle(ClientLevel level, double xCoord, double yCoord, double zCoord, SpriteSet spriteSet, double xd, double yd, double zd) {
         super(level, xCoord, yCoord, zCoord, xd, yd, zd);
-        this.friction = 0.8f + this.random.nextFloat() * 0.1f;
+        this.friction = 0.9f;
         this.xd = xd;
         this.yd = yd;
         this.zd = zd;
