@@ -32,7 +32,7 @@ public class MoonSlashSpell extends AbstractSpell {
             .setMinRarity(SpellRarity.RARE)
             .setSchoolResource(SchoolRegistry.EVOCATION_RESOURCE)
             .setMaxLevel(5)
-            .setCooldownSeconds(15)
+            .setCooldownSeconds(12)
             .build();
 
     @Override

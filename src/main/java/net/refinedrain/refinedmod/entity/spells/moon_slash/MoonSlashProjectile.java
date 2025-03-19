@@ -116,7 +116,7 @@ public class  MoonSlashProjectile extends Projectile implements AntiMagicSuscept
             }
             for (Entity entity : level().getEntities(this, this.getBoundingBox()).stream().filter(target -> canHitEntity(target) && !victims.contains(target)).collect(Collectors.toSet())) {
                 damageEntity(entity);
-                MagicManager.spawnParticles(level(), ParticleHelper.GLINT_STAR, entity.getX(), entity.getY(), entity.getZ(), 20, 0, 0, 0, .5, true);
+                MagicManager.spawnParticles(level(), ParticleHelper.GLINT_STAR, entity.getX(), entity.getY(), entity.getZ(), 15, 0, 0, 0, .4, true);
                 if (entity instanceof ShieldPart || entity instanceof AbstractShieldEntity) {
                     discard();
                     return;
@@ -161,9 +161,9 @@ public class  MoonSlashProjectile extends Projectile implements AntiMagicSuscept
     public void spawnParticles() {
         if (level().isClientSide) {
             float width = (float) getBoundingBox().getXsize();
-            float step = 0.8f;
+            float step = 0.4f;
             float radians = Mth.DEG_TO_RAD * getYRot();
-            float speed = .2f;
+            float speed = .1f;
             for (int i = 0; i < width / step; i++) {
                 double x = getX();
                 double y = getY();
@@ -172,9 +172,9 @@ public class  MoonSlashProjectile extends Projectile implements AntiMagicSuscept
                 double rotX = offset * Math.cos(radians);
                 double rotZ = -offset * Math.sin(radians);
 
-                double dx = Math.random() * speed * 2 - speed;
-                double dy = Math.random() * speed * 2 - speed;
-                double dz = Math.random() * speed * 2 - speed;
+                double dx = (Math.random() - 0.5) * speed;
+                double dy = (Math.random() - 0.5) * speed;
+                double dz = (Math.random() - 0.5) * speed;
                 level().addParticle(ParticleHelper.GLINT_STAR, false, x + rotX + dx, y + dy, z + rotZ + dz, dx, dy, dz);
             }
         }

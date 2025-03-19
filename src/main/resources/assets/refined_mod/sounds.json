@@ -1,0 +1,10 @@
+{
+  "jades_jewel": {
+    "sounds": [
+      {
+        "name": "refined_mod:jades_jewel",
+        "stream": true
+      }
+    ]
+  }
+}

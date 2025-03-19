@@ -2,12 +2,14 @@ package net.refinedrain.refinedmod.registry;
 
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
+import io.redspace.ironsspellbooks.spells.ice.SummonPolarBearSpell;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.refinedrain.refinedmod.RefinedMod;
 import net.refinedrain.refinedmod.spells.FrostStrikeSpell;
 import net.refinedrain.refinedmod.spells.MoonSlashSpell;
+import net.refinedrain.refinedmod.spells.SummonWolvesSpell;
 import net.refinedrain.refinedmod.spells.ThunderStrikeSpell;
 
 
@@ -25,6 +27,7 @@ public class RefinedSpellRegistry {
     public static final RegistryObject<AbstractSpell> FROST_STRIKE_SPELL = registerSpell(new FrostStrikeSpell());
     public static final RegistryObject<AbstractSpell> THUNDER_STRIKE_SPELL = registerSpell(new ThunderStrikeSpell());
     public static final RegistryObject<AbstractSpell> MOON_SLASH_SPELL = registerSpell(new MoonSlashSpell());
+    public static final RegistryObject<AbstractSpell> SUMMON_WOLVES_SPELL = registerSpell(new SummonWolvesSpell());
 
 }
 

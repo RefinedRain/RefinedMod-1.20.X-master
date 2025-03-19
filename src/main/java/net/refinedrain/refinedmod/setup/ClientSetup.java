@@ -1,5 +1,6 @@
 package net.refinedrain.refinedmod.setup;
 
+import net.minecraft.client.renderer.entity.WolfRenderer;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -19,6 +20,8 @@ public class ClientSetup {
     public static void rendererRegister(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(EntityRegistry.FROST_STRIKE_ENTITY.get(), FrostStrikeRenderer::new);
         event.registerEntityRenderer(EntityRegistry.MOON_SLASH_PROJECTILE.get(), MoonSlashRenderer::new);
+
+        event.registerEntityRenderer(EntityRegistry.SUMMONED_WOLF.get(), WolfRenderer::new);
     }
 
     @SubscribeEvent

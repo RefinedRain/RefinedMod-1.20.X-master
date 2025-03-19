@@ -39,7 +39,7 @@ public class FrostStrikeSpell extends AbstractSpell {
             .setMinRarity(SpellRarity.UNCOMMON)
             .setSchoolResource(SchoolRegistry.ICE_RESOURCE)
             .setMaxLevel(5)
-            .setCooldownSeconds(15)
+            .setCooldownSeconds(12)
             .build();
 
     @Override
